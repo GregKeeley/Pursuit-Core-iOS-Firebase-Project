@@ -19,6 +19,11 @@
 		C164B0C524180D3E007C12ED /* AuthenticationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0C424180D3E007C12ED /* AuthenticationSession.swift */; };
 		C164B0C724180D75007C12ED /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0C624180D75007C12ED /* StorageService.swift */; };
 		C164B0C924180DBB007C12ED /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0C824180DBB007C12ED /* DatabaseService.swift */; };
+		C164B0CB24181069007C12ED /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C164B0CA24181069007C12ED /* LoginScreen.storyboard */; };
+		C164B0CE24181114007C12ED /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0CD24181114007C12ED /* UIViewController+Extensions.swift */; };
+		C164B0D024181139007C12ED /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0CF24181139007C12ED /* UIImage+Extensions.swift */; };
+		C164B0D22418116F007C12ED /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0D12418116F007C12ED /* UIView+Extensions.swift */; };
+		C164B0D424181284007C12ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0D324181284007C12ED /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		C164B0C424180D3E007C12ED /* AuthenticationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSession.swift; sourceTree = "<group>"; };
 		C164B0C624180D75007C12ED /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		C164B0C824180DBB007C12ED /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		C164B0CA24181069007C12ED /* LoginScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
+		C164B0CD24181114007C12ED /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		C164B0CF24181139007C12ED /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		C164B0D12418116F007C12ED /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		C164B0D324181284007C12ED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE9D8EA094464EA6435613AB /* Pods-Insta-Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-Clone.debug.xcconfig"; path = "Target Support Files/Pods-Insta-Clone/Pods-Insta-Clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +115,7 @@
 				C164B0C324180D05007C12ED /* Firebase_Services */,
 				C164B0C024180CD7007C12ED /* Supporting Files */,
 				C164B0C124180CDE007C12ED /* View Controllers */,
+				C164B0CC241810F8007C12ED /* Extensions */,
 				C164B0C224180CF8007C12ED /* Storyboards */,
 				C164B0A52418043D007C12ED /* Assets.xcassets */,
 				C164B0AA2418043D007C12ED /* Info.plist */,
@@ -135,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				C164B0A024180437007C12ED /* ViewController.swift */,
+				C164B0D324181284007C12ED /* LoginViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -142,6 +154,7 @@
 		C164B0C224180CF8007C12ED /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				C164B0CA24181069007C12ED /* LoginScreen.storyboard */,
 				C164B0A224180437007C12ED /* Main.storyboard */,
 				C164B0A72418043D007C12ED /* LaunchScreen.storyboard */,
 			);
@@ -156,6 +169,16 @@
 				C164B0C824180DBB007C12ED /* DatabaseService.swift */,
 			);
 			path = Firebase_Services;
+			sourceTree = "<group>";
+		};
+		C164B0CC241810F8007C12ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C164B0CD24181114007C12ED /* UIViewController+Extensions.swift */,
+				C164B0CF24181139007C12ED /* UIImage+Extensions.swift */,
+				C164B0D12418116F007C12ED /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DD25F48706301DA39C129522 /* Pods */ = {
@@ -253,6 +276,7 @@
 				C164B0A92418043D007C12ED /* LaunchScreen.storyboard in Resources */,
 				C164B0A62418043D007C12ED /* Assets.xcassets in Resources */,
 				C164B0BF24180780007C12ED /* GoogleService-Info.plist in Resources */,
+				C164B0CB24181069007C12ED /* LoginScreen.storyboard in Resources */,
 				C164B0A424180437007C12ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,9 +340,13 @@
 				C164B0C924180DBB007C12ED /* DatabaseService.swift in Sources */,
 				C164B0C724180D75007C12ED /* StorageService.swift in Sources */,
 				C164B0A124180437007C12ED /* ViewController.swift in Sources */,
+				C164B0D22418116F007C12ED /* UIView+Extensions.swift in Sources */,
+				C164B0CE24181114007C12ED /* UIViewController+Extensions.swift in Sources */,
 				C164B09D24180437007C12ED /* AppDelegate.swift in Sources */,
 				C164B0C524180D3E007C12ED /* AuthenticationSession.swift in Sources */,
 				C164B09F24180437007C12ED /* SceneDelegate.swift in Sources */,
+				C164B0D424181284007C12ED /* LoginViewController.swift in Sources */,
+				C164B0D024181139007C12ED /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
