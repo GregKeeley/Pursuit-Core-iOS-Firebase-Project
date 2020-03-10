@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainTabBarController.swift
 //  Insta-Clone
 //
 //  Created by Gregory Keeley on 3/10/20.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
+    
+
 
 
 }
-

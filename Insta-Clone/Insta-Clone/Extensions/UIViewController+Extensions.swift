@@ -17,6 +17,11 @@ extension UIViewController {
         }
         window.rootViewController = rootviewController
     }
+    public static func showViewController(storyboardName: String, viewControllerId: String) {
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        let newVC = storyboard.instantiateViewController(identifier: viewControllerId)
+        resetWindow(with: newVC)
+    }
 }
 extension UIViewController {
     func showAlert(title: String?, message: String, completion: ((UIAlertAction) -> Void)? = nil) {
