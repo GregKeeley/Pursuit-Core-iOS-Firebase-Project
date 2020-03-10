@@ -16,6 +16,9 @@
 		C164B0A92418043D007C12ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C164B0A72418043D007C12ED /* LaunchScreen.storyboard */; };
 		C164B0B724180490007C12ED /* Insta_CloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0B624180490007C12ED /* Insta_CloneTests.swift */; };
 		C164B0BF24180780007C12ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C164B0BE24180780007C12ED /* GoogleService-Info.plist */; };
+		C164B0C524180D3E007C12ED /* AuthenticationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0C424180D3E007C12ED /* AuthenticationSession.swift */; };
+		C164B0C724180D75007C12ED /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0C624180D75007C12ED /* StorageService.swift */; };
+		C164B0C924180DBB007C12ED /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0C824180DBB007C12ED /* DatabaseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		C164B0B624180490007C12ED /* Insta_CloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insta_CloneTests.swift; sourceTree = "<group>"; };
 		C164B0B824180490007C12ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C164B0BE24180780007C12ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C164B0C424180D3E007C12ED /* AuthenticationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSession.swift; sourceTree = "<group>"; };
+		C164B0C624180D75007C12ED /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		C164B0C824180DBB007C12ED /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		CE9D8EA094464EA6435613AB /* Pods-Insta-Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-Clone.debug.xcconfig"; path = "Target Support Files/Pods-Insta-Clone/Pods-Insta-Clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,14 +102,13 @@
 		C164B09B24180437007C12ED /* Insta-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				C164B0BE24180780007C12ED /* GoogleService-Info.plist */,
-				C164B09C24180437007C12ED /* AppDelegate.swift */,
-				C164B09E24180437007C12ED /* SceneDelegate.swift */,
-				C164B0A024180437007C12ED /* ViewController.swift */,
-				C164B0A224180437007C12ED /* Main.storyboard */,
+				C164B0C324180D05007C12ED /* Firebase_Services */,
+				C164B0C024180CD7007C12ED /* Supporting Files */,
+				C164B0C124180CDE007C12ED /* View Controllers */,
+				C164B0C224180CF8007C12ED /* Storyboards */,
 				C164B0A52418043D007C12ED /* Assets.xcassets */,
-				C164B0A72418043D007C12ED /* LaunchScreen.storyboard */,
 				C164B0AA2418043D007C12ED /* Info.plist */,
+				C164B0BE24180780007C12ED /* GoogleService-Info.plist */,
 			);
 			path = "Insta-Clone";
 			sourceTree = "<group>";
@@ -115,6 +120,42 @@
 				C164B0B824180490007C12ED /* Info.plist */,
 			);
 			path = "Insta-CloneTests";
+			sourceTree = "<group>";
+		};
+		C164B0C024180CD7007C12ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C164B09C24180437007C12ED /* AppDelegate.swift */,
+				C164B09E24180437007C12ED /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C164B0C124180CDE007C12ED /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C164B0A024180437007C12ED /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C164B0C224180CF8007C12ED /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C164B0A224180437007C12ED /* Main.storyboard */,
+				C164B0A72418043D007C12ED /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C164B0C324180D05007C12ED /* Firebase_Services */ = {
+			isa = PBXGroup;
+			children = (
+				C164B0C424180D3E007C12ED /* AuthenticationSession.swift */,
+				C164B0C624180D75007C12ED /* StorageService.swift */,
+				C164B0C824180DBB007C12ED /* DatabaseService.swift */,
+			);
+			path = Firebase_Services;
 			sourceTree = "<group>";
 		};
 		DD25F48706301DA39C129522 /* Pods */ = {
@@ -272,8 +313,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C164B0C924180DBB007C12ED /* DatabaseService.swift in Sources */,
+				C164B0C724180D75007C12ED /* StorageService.swift in Sources */,
 				C164B0A124180437007C12ED /* ViewController.swift in Sources */,
 				C164B09D24180437007C12ED /* AppDelegate.swift in Sources */,
+				C164B0C524180D3E007C12ED /* AuthenticationSession.swift in Sources */,
 				C164B09F24180437007C12ED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
