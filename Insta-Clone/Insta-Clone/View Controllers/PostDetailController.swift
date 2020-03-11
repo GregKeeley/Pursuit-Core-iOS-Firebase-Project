@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PostViewController.swift
 //  Insta-Clone
 //
 //  Created by Gregory Keeley on 3/10/20.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class PostDetailController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
+    
 
 
 }
-

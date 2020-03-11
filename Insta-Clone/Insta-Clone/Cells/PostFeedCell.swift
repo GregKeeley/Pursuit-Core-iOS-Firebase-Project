@@ -10,4 +10,11 @@ import UIKit
 
 class PostFeedCell: UICollectionViewCell {
     
+    @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var postCaptionLabel: UILabel!
+    @IBOutlet weak var createdByLabel: UILabel!
+    
+    public func configureCell() {
+        
+    }
 }

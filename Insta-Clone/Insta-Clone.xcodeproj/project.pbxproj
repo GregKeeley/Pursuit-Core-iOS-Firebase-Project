@@ -10,7 +10,7 @@
 		C009C4143FBCABE035BC3A4F /* Pods_Insta_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB3ADBE7EC5F53E4563933F /* Pods_Insta_Clone.framework */; };
 		C164B09D24180437007C12ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B09C24180437007C12ED /* AppDelegate.swift */; };
 		C164B09F24180437007C12ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B09E24180437007C12ED /* SceneDelegate.swift */; };
-		C164B0A124180437007C12ED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0A024180437007C12ED /* MainViewController.swift */; };
+		C164B0A124180437007C12ED /* MainFeediewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0A024180437007C12ED /* MainFeediewController.swift */; };
 		C164B0A424180437007C12ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C164B0A224180437007C12ED /* Main.storyboard */; };
 		C164B0A62418043D007C12ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C164B0A52418043D007C12ED /* Assets.xcassets */; };
 		C164B0A92418043D007C12ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C164B0A72418043D007C12ED /* LaunchScreen.storyboard */; };
@@ -26,7 +26,7 @@
 		C164B0D424181284007C12ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0D324181284007C12ED /* LoginViewController.swift */; };
 		C164B0D624184F2A007C12ED /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0D524184F29007C12ED /* CreatePostViewController.swift */; };
 		C164B0D824184F61007C12ED /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0D724184F61007C12ED /* ProfileSettingsViewController.swift */; };
-		C164B0DA24185858007C12ED /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0D924185858007C12ED /* PostViewController.swift */; };
+		C164B0DA24185858007C12ED /* PostDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0D924185858007C12ED /* PostDetailController.swift */; };
 		C164B0DC24185D0B007C12ED /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0DB24185D0A007C12ED /* MainTabBarController.swift */; };
 		C164B0DE24185DE5007C12ED /* PostFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0DD24185DE5007C12ED /* PostFeedCell.swift */; };
 /* End PBXBuildFile section */
@@ -47,7 +47,7 @@
 		C164B09924180437007C12ED /* Insta-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insta-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C164B09C24180437007C12ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C164B09E24180437007C12ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C164B0A024180437007C12ED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C164B0A024180437007C12ED /* MainFeediewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeediewController.swift; sourceTree = "<group>"; };
 		C164B0A324180437007C12ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C164B0A52418043D007C12ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C164B0A82418043D007C12ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		C164B0D324181284007C12ED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C164B0D524184F29007C12ED /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		C164B0D724184F61007C12ED /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
-		C164B0D924185858007C12ED /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		C164B0D924185858007C12ED /* PostDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailController.swift; sourceTree = "<group>"; };
 		C164B0DB24185D0A007C12ED /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		C164B0DD24185DE5007C12ED /* PostFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedCell.swift; sourceTree = "<group>"; };
 		CE9D8EA094464EA6435613AB /* Pods-Insta-Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-Clone.debug.xcconfig"; path = "Target Support Files/Pods-Insta-Clone/Pods-Insta-Clone.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,12 +156,12 @@
 		C164B0C124180CDE007C12ED /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C164B0A024180437007C12ED /* MainViewController.swift */,
+				C164B0D324181284007C12ED /* LoginViewController.swift */,
 				C164B0DB24185D0A007C12ED /* MainTabBarController.swift */,
+				C164B0A024180437007C12ED /* MainFeediewController.swift */,
 				C164B0D524184F29007C12ED /* CreatePostViewController.swift */,
 				C164B0D724184F61007C12ED /* ProfileSettingsViewController.swift */,
-				C164B0D324181284007C12ED /* LoginViewController.swift */,
-				C164B0D924185858007C12ED /* PostViewController.swift */,
+				C164B0D924185858007C12ED /* PostDetailController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -363,8 +363,8 @@
 				C164B0C924180DBB007C12ED /* DatabaseService.swift in Sources */,
 				C164B0DE24185DE5007C12ED /* PostFeedCell.swift in Sources */,
 				C164B0C724180D75007C12ED /* StorageService.swift in Sources */,
-				C164B0A124180437007C12ED /* MainViewController.swift in Sources */,
-				C164B0DA24185858007C12ED /* PostViewController.swift in Sources */,
+				C164B0A124180437007C12ED /* MainFeediewController.swift in Sources */,
+				C164B0DA24185858007C12ED /* PostDetailController.swift in Sources */,
 				C164B0D22418116F007C12ED /* UIView+Extensions.swift in Sources */,
 				C164B0CE24181114007C12ED /* UIViewController+Extensions.swift in Sources */,
 				C164B09D24180437007C12ED /* AppDelegate.swift in Sources */,
