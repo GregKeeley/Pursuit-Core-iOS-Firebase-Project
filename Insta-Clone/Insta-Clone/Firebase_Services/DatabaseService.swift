@@ -17,7 +17,7 @@ class DatabaseService {
         guard let user = Auth.auth().currentUser else { return }
         let documentRef = db.collection(DatabaseService.postsCollection).document()
         // Create post here to upload to database
-        db.collection(DatabaseService.postsCollection).document(documentRef.documentID).setData([:]) {
+        db.collection(DatabaseService.postsCollection).document(documentRef.documentID).setData(["createdBy": displayName, "caption": postCaption, "postedDate": Date(), "postID": user.uid]) {
             (error) in
             if let error = error {
                 completion(.failure(error))

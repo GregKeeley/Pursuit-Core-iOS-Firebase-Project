@@ -95,7 +95,12 @@ class CreatePostViewController: UIViewController {
                     self?.showAlert(title: "error uploading photo", message: "\(error.localizedDescription)")
                 }
             case .success(let url):
+                DispatchQueue.main.async {
                 self?.updateImageItemURL(url, documentId: documentID)
+                    self?.postImageView.image = UIImage(systemName: "photo.fill")
+                    self?.captionTextField.text = ""
+                    self?.showAlert(title: "Post created!", message: "yay!!")
+                }
             }
         }
     }

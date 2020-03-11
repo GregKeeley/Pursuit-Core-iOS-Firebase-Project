@@ -142,7 +142,7 @@ extension ProfileSettingsViewController: UITextFieldDelegate {
             return true
         }
         print("yay")
-        textField.placeholder = ("New display name: \(text)")
+        textField.placeholder = text
         textField.isUserInteractionEnabled = false
         textField.resignFirstResponder()
         return true
