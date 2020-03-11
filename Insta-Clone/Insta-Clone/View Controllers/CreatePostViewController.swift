@@ -83,7 +83,7 @@ class CreatePostViewController: UIViewController {
                     self?.showAlert(title: "Error creating post", message: "something went wrong: \(error.localizedDescription)")
                 }
             case .success(let documentID):
-                break
+                self?.upload(photo: resizedImage, documentID: documentID)
             }
         }
     }

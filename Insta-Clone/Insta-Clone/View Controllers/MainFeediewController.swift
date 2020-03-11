@@ -36,9 +36,10 @@ class MainFeediewController: UIViewController {
                     self?.showAlert(title: "Firestore Error", message: "\(error.localizedDescription)")
                 }
             } else if let snapshot = snapshot {
-                print("There are \(snapshot.documents.count) item for sale")
+                print("There are \(snapshot.documents.count) posts")
                 let posts = snapshot.documents.map { Post($0.data()) }
                 self?.posts = posts
+                dump(self?.posts)
             }
         })
     }
