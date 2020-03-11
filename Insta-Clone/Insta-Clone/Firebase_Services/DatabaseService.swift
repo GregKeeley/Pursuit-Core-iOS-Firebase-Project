@@ -11,13 +11,13 @@ import FirebaseFirestore
 import FirebaseAuth
 
 class DatabaseService {
-    static let itemsCollection = "items"
+    static let postsCollection = "posts"
     private let db = Firestore.firestore()
-    public func createItem(itemName: String, price: Double, category: Category, displayName: String, completion: @escaping (Result<String, Error>) -> ()) {
+    public func createPost(postCaption: String, displayName: String, completion: @escaping (Result<String, Error>) -> ()) {
         guard let user = Auth.auth().currentUser else { return }
-        let documentRef = db.collection(DatabaseService.itemsCollection).document()
+        let documentRef = db.collection(DatabaseService.postsCollection).document()
         // Create post here to upload to database
-        db.collection(DatabaseService.itemsCollection).document(documentRef.documentID).setData([:]) {
+        db.collection(DatabaseService.postsCollection).document(documentRef.documentID).setData([:]) {
             (error) in
             if let error = error {
                 completion(.failure(error))

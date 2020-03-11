@@ -160,6 +160,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ni-CZ-EDy">
+                                <rect key="frame" x="182" y="480" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="95E-M9-rWU"/>
+                                    <constraint firstAttribute="width" constant="50" id="Ov7-MM-soD"/>
+                                </constraints>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="uploadPost:" destination="qSB-dZ-8vv" eventType="touchUpInside" id="YgB-Vt-TrW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -167,14 +178,18 @@
                             <constraint firstItem="yPY-5f-Yd3" firstAttribute="top" secondItem="wDK-Q0-85y" secondAttribute="bottom" constant="8" id="61C-oL-eiI"/>
                             <constraint firstItem="wDK-Q0-85y" firstAttribute="top" secondItem="YND-LL-ffJ" secondAttribute="top" constant="0.01" id="FCG-uQ-SbE"/>
                             <constraint firstItem="yPY-5f-Yd3" firstAttribute="leading" secondItem="YND-LL-ffJ" secondAttribute="leading" constant="20" id="J75-V3-YDX"/>
+                            <constraint firstItem="3ni-CZ-EDy" firstAttribute="top" secondItem="yPY-5f-Yd3" secondAttribute="bottom" constant="20" id="KgE-2Z-dkm"/>
                             <constraint firstItem="wDK-Q0-85y" firstAttribute="leading" secondItem="YND-LL-ffJ" secondAttribute="leading" constant="20" id="QTn-Ob-czW"/>
                             <constraint firstItem="YND-LL-ffJ" firstAttribute="trailing" secondItem="wDK-Q0-85y" secondAttribute="trailing" constant="20" id="j3R-ZS-RQp"/>
+                            <constraint firstItem="3ni-CZ-EDy" firstAttribute="centerX" secondItem="yPY-5f-Yd3" secondAttribute="centerX" id="lH7-al-G7O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YND-LL-ffJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Create Post" image="plus.app.fill" catalog="system" selectedImage="plus" id="jM2-3e-8kq"/>
                     <connections>
+                        <outlet property="captionTextField" destination="yPY-5f-Yd3" id="DCK-Mf-6Od"/>
                         <outlet property="postImageView" destination="wDK-Q0-85y" id="wpE-Md-kBO"/>
+                        <outlet property="uploadButton" destination="3ni-CZ-EDy" id="VTm-39-c7X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSK-5W-klN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

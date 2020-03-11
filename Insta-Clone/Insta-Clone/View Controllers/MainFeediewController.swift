@@ -30,7 +30,7 @@ class MainFeediewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        listener = Firestore.firestore().collection(DatabaseService.itemsCollection).addSnapshotListener({ [weak self] (snapshot, error) in
+        listener = Firestore.firestore().collection(DatabaseService.postsCollection).addSnapshotListener({ [weak self] (snapshot, error) in
             if let error = error {
                 DispatchQueue.main.async {
                     self?.showAlert(title: "Firestore Error", message: "\(error.localizedDescription)")
