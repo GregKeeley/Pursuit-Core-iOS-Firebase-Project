@@ -31,7 +31,7 @@
                             <outlet property="delegate" destination="3He-z7-Fnu" id="xH1-Ie-NgW"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="gear" catalog="system" id="tQW-Oy-ccU"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="line.horizontal.3" catalog="system" selectedImage="gear" id="tQW-Oy-ccU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2h-kf-4qN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,7 +117,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house" catalog="system" id="wU3-0e-161"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house" id="wU3-0e-161"/>
                     <connections>
                         <outlet property="collectionView" destination="giZ-V8-xHi" id="oHp-nQ-lc4"/>
                     </connections>
@@ -144,25 +144,49 @@
         <!--Create Post-->
         <scene sceneID="8wf-dI-mRg">
             <objects>
-                <viewController id="qSB-dZ-8vv" sceneMemberID="viewController">
+                <viewController id="qSB-dZ-8vv" customClass="CreatePostViewController" customModule="Insta_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eEe-Hs-wmN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wDK-Q0-85y">
+                                <rect key="frame" x="20" y="45" width="374" height="371.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wDK-Q0-85y" secondAttribute="height" multiplier="1:1" id="KZg-No-oNW"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Caption title " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yPY-5f-Yd3">
+                                <rect key="frame" x="20" y="426" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YND-LL-ffJ" firstAttribute="trailing" secondItem="yPY-5f-Yd3" secondAttribute="trailing" constant="20" id="45g-TI-zjt"/>
+                            <constraint firstItem="yPY-5f-Yd3" firstAttribute="top" secondItem="wDK-Q0-85y" secondAttribute="bottom" constant="8" id="61C-oL-eiI"/>
+                            <constraint firstItem="wDK-Q0-85y" firstAttribute="top" secondItem="YND-LL-ffJ" secondAttribute="top" constant="0.01" id="FCG-uQ-SbE"/>
+                            <constraint firstItem="yPY-5f-Yd3" firstAttribute="leading" secondItem="YND-LL-ffJ" secondAttribute="leading" constant="20" id="J75-V3-YDX"/>
+                            <constraint firstItem="wDK-Q0-85y" firstAttribute="leading" secondItem="YND-LL-ffJ" secondAttribute="leading" constant="20" id="QTn-Ob-czW"/>
+                            <constraint firstItem="YND-LL-ffJ" firstAttribute="trailing" secondItem="wDK-Q0-85y" secondAttribute="trailing" constant="20" id="j3R-ZS-RQp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YND-LL-ffJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Create Post" selectedImage="plus" catalog="system" id="jM2-3e-8kq"/>
+                    <tabBarItem key="tabBarItem" title="Create Post" image="plus.app.fill" catalog="system" selectedImage="plus" id="jM2-3e-8kq"/>
+                    <connections>
+                        <outlet property="postImageView" destination="wDK-Q0-85y" id="wpE-Md-kBO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSK-5W-klN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="811"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="810.9375"/>
         </scene>
-        <!--Main Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="IrI-gU-T0M">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="K61-el-7FM" customClass="MainTabBarController" customModule="Insta_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="K61-el-7FM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PW6-KG-OlK">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="PW6-KG-OlK">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -181,7 +205,11 @@
     <resources>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="house" catalog="system" width="64" height="54"/>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
+        <image name="line.horizontal.3" catalog="system" width="64" height="32"/>
         <image name="photo" catalog="system" width="64" height="46"/>
+        <image name="photo.fill" catalog="system" width="64" height="46"/>
         <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="plus.app.fill" catalog="system" width="64" height="56"/>
     </resources>
 </document>
