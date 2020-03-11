@@ -99,7 +99,6 @@ class CreatePostViewController: UIViewController {
                 self?.updateImageItemURL(url, documentId: documentID)
                     self?.postImageView.image = UIImage(systemName: "photo.fill")
                     self?.captionTextField.text = ""
-                    self?.showAlert(title: "Post created!", message: "yay!!")
                 }
             }
         }
@@ -112,8 +111,7 @@ class CreatePostViewController: UIViewController {
                 }
             } else {
                 DispatchQueue.main.async {
-                    print("yerp")
-                    self?.dismiss(animated: true)
+                                self?.showAlert(title: "Post created!", message: "yay!!")
                 }
             }
         }

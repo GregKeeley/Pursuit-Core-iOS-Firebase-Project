@@ -143,19 +143,19 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="giZ-V8-xHi">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ldw-uu-PUx">
-                                    <size key="itemSize" width="382" height="439"/>
+                                    <size key="itemSize" width="382" height="398"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="postCell" id="9jG-CT-Hdp" customClass="PostFeedCell" customModule="Insta_Clone" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="0.0" width="382" height="439"/>
+                                        <rect key="frame" x="16" y="0.0" width="382" height="398"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EIT-Ce-Eda">
-                                            <rect key="frame" x="0.0" y="0.0" width="382" height="439"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="398"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2p0-zL-2Vz">
@@ -164,37 +164,50 @@
                                                         <constraint firstAttribute="width" secondItem="2p0-zL-2Vz" secondAttribute="height" multiplier="1:1" id="9V0-Aj-HXs"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MA-jK-Y5t">
-                                                    <rect key="frame" x="8" y="382" width="242" height="47"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MA-jK-Y5t">
+                                                    <rect key="frame" x="8" y="367.5" width="242" height="22.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Post Caption">
+                                                            <attributes>
+                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <font key="NSFont" size="17" name="Futura-MediumItalic"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@CreatedBy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbm-yi-Azg">
-                                                    <rect key="frame" x="258" y="382" width="116" height="47"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbm-yi-Azg">
+                                                    <rect key="frame" x="258" y="369.5" width="116" height="20.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="116" id="HC0-dr-vDP"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="@CreatedBy">
+                                                            <attributes>
+                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <font key="NSFont" size="17" name="Futura-CondensedMedium"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="5MA-jK-Y5t" firstAttribute="top" secondItem="2p0-zL-2Vz" secondAttribute="bottom" constant="8" id="5fo-OX-4Uk"/>
                                                 <constraint firstItem="2p0-zL-2Vz" firstAttribute="leading" secondItem="EIT-Ce-Eda" secondAttribute="leading" constant="8" id="6Bz-SE-XUY"/>
                                                 <constraint firstAttribute="trailing" secondItem="2p0-zL-2Vz" secondAttribute="trailing" constant="8" id="Um6-e4-3Xt"/>
-                                                <constraint firstAttribute="bottom" secondItem="dbm-yi-Azg" secondAttribute="bottom" constant="10" id="YKE-B1-tSR"/>
+                                                <constraint firstAttribute="bottom" secondItem="dbm-yi-Azg" secondAttribute="bottom" constant="8" id="YKE-B1-tSR"/>
                                                 <constraint firstAttribute="trailing" secondItem="dbm-yi-Azg" secondAttribute="trailing" constant="8" id="YYY-Xg-BAt"/>
                                                 <constraint firstItem="2p0-zL-2Vz" firstAttribute="top" secondItem="EIT-Ce-Eda" secondAttribute="top" constant="8" id="Zi5-BM-uAJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="5MA-jK-Y5t" secondAttribute="bottom" constant="10" id="iR1-Bc-gBu"/>
-                                                <constraint firstItem="dbm-yi-Azg" firstAttribute="top" secondItem="2p0-zL-2Vz" secondAttribute="bottom" constant="8" id="lWj-D5-S1U"/>
+                                                <constraint firstAttribute="bottom" secondItem="5MA-jK-Y5t" secondAttribute="bottom" constant="8" id="iR1-Bc-gBu"/>
                                                 <constraint firstItem="5MA-jK-Y5t" firstAttribute="leading" secondItem="EIT-Ce-Eda" secondAttribute="leading" constant="8" id="oby-9F-Rhy"/>
                                                 <constraint firstItem="dbm-yi-Azg" firstAttribute="leading" secondItem="5MA-jK-Y5t" secondAttribute="trailing" constant="8" id="ziO-Ch-fqp"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="382" height="439"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="382" height="398"/>
                                         <connections>
                                             <outlet property="createdByLabel" destination="dbm-yi-Azg" id="1wG-d4-ZAZ"/>
                                             <outlet property="postCaptionLabel" destination="5MA-jK-Y5t" id="jG5-fK-4Ve"/>

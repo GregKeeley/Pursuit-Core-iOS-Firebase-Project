@@ -93,7 +93,7 @@ class ProfileSettingsViewController: UITableViewController {
     @IBAction func signOutButtonPressed(_ sender: UIBarButtonItem) {
         do {
             try Auth.auth().signOut()
-        UIViewController.showViewController(storyboardName: "LoginView", viewControllerId: "LoginViewController")
+        UIViewController.showViewController(storyboardName: "LoginScreen", viewControllerId: "LoginVC")
         } catch {
             DispatchQueue.main.async {
                 self.showAlert(title: "Error logging out", message: "\(error.localizedDescription)")
@@ -109,7 +109,7 @@ class ProfileSettingsViewController: UITableViewController {
         }
         guard let user = Auth.auth().currentUser else { return }
         let resizedImage = UIImage.resizeImage(originalImage: selectedImage, rect: profileImageView.bounds)
-        storageService.uploadPhoto(userId: user.uid, image: selectedImage) { [weak self] (result) in
+        storageService.uploadPhoto(userId: user.uid, image: resizedImage) { [weak self] (result) in
             switch result {
             case .failure(let error):
                 DispatchQueue.main.async {
@@ -141,7 +141,6 @@ extension ProfileSettingsViewController: UITextFieldDelegate {
                 print("ERrrrr")
             return true
         }
-        print("yay")
         textField.placeholder = text
         textField.isUserInteractionEnabled = false
         textField.resignFirstResponder()

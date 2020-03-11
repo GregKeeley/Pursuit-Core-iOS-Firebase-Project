@@ -17,7 +17,7 @@ class PostFeedCell: UICollectionViewCell {
     
     public func configureCell(_ post: Post) {
         postImageView.kf.setImage(with: URL(string: post.imageURL))
-        postCaptionLabel.text = post.caption
-        createdByLabel.text = post.createdBy
+        postCaptionLabel.text = ("\(post.caption)")
+        createdByLabel.text = ("@\(post.createdBy)")
     }
 }

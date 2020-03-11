@@ -57,10 +57,12 @@ extension MainFeediewController: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as? PostFeedCell else {
-            fatalError("Failed to dequeu PostFeedCell")
+            fatalError("Failed to dequeue PostFeedCell")
         }
         let post = posts[indexPath.row]
         cell.configureCell(post)
+        cell.layer.borderWidth = 1
+        cell.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         cell.layer.cornerRadius = 4
         return cell
     }
