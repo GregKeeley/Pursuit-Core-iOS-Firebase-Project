@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PostFeedCell: UICollectionViewCell {
     
@@ -14,7 +15,9 @@ class PostFeedCell: UICollectionViewCell {
     @IBOutlet weak var postCaptionLabel: UILabel!
     @IBOutlet weak var createdByLabel: UILabel!
     
-    public func configureCell() {
-        
+    public func configureCell(_ post: Post) {
+        postImageView.kf.setImage(with: URL(string: post.imageURL))
+        postCaptionLabel.text = post.caption
+        createdByLabel.text = post.createdBy
     }
 }

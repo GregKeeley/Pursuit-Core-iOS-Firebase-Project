@@ -29,6 +29,7 @@
 		C164B0DA24185858007C12ED /* PostDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0D924185858007C12ED /* PostDetailController.swift */; };
 		C164B0DC24185D0B007C12ED /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0DB24185D0A007C12ED /* MainTabBarController.swift */; };
 		C164B0DE24185DE5007C12ED /* PostFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0DD24185DE5007C12ED /* PostFeedCell.swift */; };
+		C1E1D6B124193E7700E449FE /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E1D6B024193E7700E449FE /* PostModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		C164B0D924185858007C12ED /* PostDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailController.swift; sourceTree = "<group>"; };
 		C164B0DB24185D0A007C12ED /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		C164B0DD24185DE5007C12ED /* PostFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedCell.swift; sourceTree = "<group>"; };
+		C1E1D6B024193E7700E449FE /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		CE9D8EA094464EA6435613AB /* Pods-Insta-Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-Clone.debug.xcconfig"; path = "Target Support Files/Pods-Insta-Clone/Pods-Insta-Clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 			children = (
 				C164B0C324180D05007C12ED /* Firebase_Services */,
 				C164B0C024180CD7007C12ED /* Supporting Files */,
+				C1E1D6B224193E7B00E449FE /* Models */,
 				C164B0DF24185DF9007C12ED /* Cells */,
 				C164B0C124180CDE007C12ED /* View Controllers */,
 				C164B0CC241810F8007C12ED /* Extensions */,
@@ -202,6 +205,14 @@
 				C164B0DD24185DE5007C12ED /* PostFeedCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		C1E1D6B224193E7B00E449FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C1E1D6B024193E7700E449FE /* PostModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DD25F48706301DA39C129522 /* Pods */ = {
@@ -361,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C164B0C924180DBB007C12ED /* DatabaseService.swift in Sources */,
+				C1E1D6B124193E7700E449FE /* PostModel.swift in Sources */,
 				C164B0DE24185DE5007C12ED /* PostFeedCell.swift in Sources */,
 				C164B0C724180D75007C12ED /* StorageService.swift in Sources */,
 				C164B0A124180437007C12ED /* MainFeediewController.swift in Sources */,

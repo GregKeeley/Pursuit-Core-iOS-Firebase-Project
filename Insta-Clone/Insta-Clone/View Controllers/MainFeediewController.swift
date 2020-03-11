@@ -7,29 +7,59 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class MainFeediewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private var listener: ListenerRegistration?
     
+    private var posts = [Post]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         
     }
-
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        listener = Firestore.firestore().collection(DatabaseService.itemsCollection).addSnapshotListener({ [weak self] (snapshot, error) in
+            if let error = error {
+                DispatchQueue.main.async {
+                    self?.showAlert(title: "Firestore Error", message: "\(error.localizedDescription)")
+                }
+            } else if let snapshot = snapshot {
+                print("There are \(snapshot.documents.count) item for sale")
+                let posts = snapshot.documents.map { Post($0.data()) }
+                self?.posts = posts
+            }
+        })
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        listener?.remove()
+    }
+    
 }
+
+
 extension MainFeediewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return posts.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as? PostFeedCell else {
             fatalError("Failed to dequeu PostFeedCell")
         }
+        let post = posts[indexPath.row]
+        cell.configureCell(post)
         cell.layer.cornerRadius = 4
         return cell
     }
