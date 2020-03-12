@@ -275,20 +275,70 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="91.741071428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Post Detail View Controller-->
         <scene sceneID="tE1-yX-cI0">
             <objects>
-                <viewController id="JEh-fL-kg3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostDetailController" id="JEh-fL-kg3" customClass="PostDetailViewController" customModule="Insta_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bZT-S8-Quh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8y0-M3-u2H">
+                                <rect key="frame" x="20" y="44" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8y0-M3-u2H" secondAttribute="height" multiplier="1:1" id="BDH-eh-YVq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CreatedBy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbY-AY-qFz">
+                                <rect key="frame" x="20" y="426" width="218" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BD8-5L-Svn">
+                                <rect key="frame" x="20" y="455" width="374" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="zsy-uq-Utj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PostDate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auW-MT-Anu">
+                                <rect key="frame" x="246" y="426" width="148" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bYq-3R-iP4" firstAttribute="trailing" secondItem="auW-MT-Anu" secondAttribute="trailing" constant="20" id="36l-De-im3"/>
+                            <constraint firstItem="auW-MT-Anu" firstAttribute="top" secondItem="8y0-M3-u2H" secondAttribute="bottom" constant="8" id="49i-QO-Ak9"/>
+                            <constraint firstItem="auW-MT-Anu" firstAttribute="leading" secondItem="qbY-AY-qFz" secondAttribute="trailing" constant="8" id="54i-JX-wVs"/>
+                            <constraint firstItem="qbY-AY-qFz" firstAttribute="top" secondItem="8y0-M3-u2H" secondAttribute="bottom" constant="8" id="AbN-hD-BZ0"/>
+                            <constraint firstItem="bYq-3R-iP4" firstAttribute="trailing" secondItem="8y0-M3-u2H" secondAttribute="trailing" constant="20" id="Bvb-xW-H04"/>
+                            <constraint firstItem="BD8-5L-Svn" firstAttribute="leading" secondItem="bYq-3R-iP4" secondAttribute="leading" constant="20" id="Cod-lM-OPC"/>
+                            <constraint firstItem="qbY-AY-qFz" firstAttribute="leading" secondItem="bYq-3R-iP4" secondAttribute="leading" constant="20" id="by7-MI-GOW"/>
+                            <constraint firstItem="BD8-5L-Svn" firstAttribute="top" secondItem="auW-MT-Anu" secondAttribute="bottom" constant="8" id="cvA-Y6-rE7"/>
+                            <constraint firstItem="8y0-M3-u2H" firstAttribute="top" secondItem="bYq-3R-iP4" secondAttribute="top" id="jxA-SH-ci0"/>
+                            <constraint firstItem="8y0-M3-u2H" firstAttribute="leading" secondItem="bYq-3R-iP4" secondAttribute="leading" constant="20" id="rRB-GT-Lfq"/>
+                            <constraint firstItem="bYq-3R-iP4" firstAttribute="trailing" secondItem="BD8-5L-Svn" secondAttribute="trailing" constant="20" id="u64-tO-eNh"/>
+                            <constraint firstItem="qbY-AY-qFz" firstAttribute="width" secondItem="8y0-M3-u2H" secondAttribute="width" multiplier="0.66" constant="-28.840000000000003" id="uww-C9-eDG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bYq-3R-iP4"/>
                     </view>
+                    <navigationItem key="navigationItem" id="TPw-vi-XwV"/>
+                    <connections>
+                        <outlet property="captionLabel" destination="BD8-5L-Svn" id="BZR-ou-RCV"/>
+                        <outlet property="createByLabel" destination="qbY-AY-qFz" id="Pgd-dG-yBE"/>
+                        <outlet property="postDate" destination="auW-MT-Anu" id="0kg-bm-g4J"/>
+                        <outlet property="postImageView" destination="8y0-M3-u2H" id="Xrs-sH-xhq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJj-LX-vqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2244" y="85"/>
+            <point key="canvasLocation" x="2756.521739130435" y="91.741071428571431"/>
         </scene>
         <!--Create Post-->
         <scene sceneID="8wf-dI-mRg">

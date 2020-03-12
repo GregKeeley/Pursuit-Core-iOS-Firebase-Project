@@ -26,10 +26,10 @@
 		C164B0D424181284007C12ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0D324181284007C12ED /* LoginViewController.swift */; };
 		C164B0D624184F2A007C12ED /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0D524184F29007C12ED /* CreatePostViewController.swift */; };
 		C164B0D824184F61007C12ED /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0D724184F61007C12ED /* ProfileSettingsViewController.swift */; };
-		C164B0DA24185858007C12ED /* PostDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0D924185858007C12ED /* PostDetailController.swift */; };
 		C164B0DC24185D0B007C12ED /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0DB24185D0A007C12ED /* MainTabBarController.swift */; };
 		C164B0DE24185DE5007C12ED /* PostFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C164B0DD24185DE5007C12ED /* PostFeedCell.swift */; };
 		C1E1D6B124193E7700E449FE /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E1D6B024193E7700E449FE /* PostModel.swift */; };
+		C1E1D6B4241A63A600E449FE /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E1D6B3241A63A600E449FE /* PostDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,10 +67,10 @@
 		C164B0D324181284007C12ED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C164B0D524184F29007C12ED /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		C164B0D724184F61007C12ED /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
-		C164B0D924185858007C12ED /* PostDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailController.swift; sourceTree = "<group>"; };
 		C164B0DB24185D0A007C12ED /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		C164B0DD24185DE5007C12ED /* PostFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedCell.swift; sourceTree = "<group>"; };
 		C1E1D6B024193E7700E449FE /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		C1E1D6B3241A63A600E449FE /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		CE9D8EA094464EA6435613AB /* Pods-Insta-Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-Clone.debug.xcconfig"; path = "Target Support Files/Pods-Insta-Clone/Pods-Insta-Clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,9 +162,9 @@
 				C164B0D324181284007C12ED /* LoginViewController.swift */,
 				C164B0DB24185D0A007C12ED /* MainTabBarController.swift */,
 				C164B0A024180437007C12ED /* MainFeediewController.swift */,
+				C1E1D6B3241A63A600E449FE /* PostDetailViewController.swift */,
 				C164B0D524184F29007C12ED /* CreatePostViewController.swift */,
 				C164B0D724184F61007C12ED /* ProfileSettingsViewController.swift */,
-				C164B0D924185858007C12ED /* PostDetailController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -373,10 +373,10 @@
 			files = (
 				C164B0C924180DBB007C12ED /* DatabaseService.swift in Sources */,
 				C1E1D6B124193E7700E449FE /* PostModel.swift in Sources */,
+				C1E1D6B4241A63A600E449FE /* PostDetailViewController.swift in Sources */,
 				C164B0DE24185DE5007C12ED /* PostFeedCell.swift in Sources */,
 				C164B0C724180D75007C12ED /* StorageService.swift in Sources */,
 				C164B0A124180437007C12ED /* MainFeediewController.swift in Sources */,
-				C164B0DA24185858007C12ED /* PostDetailController.swift in Sources */,
 				C164B0D22418116F007C12ED /* UIView+Extensions.swift in Sources */,
 				C164B0CE24181114007C12ED /* UIViewController+Extensions.swift in Sources */,
 				C164B09D24180437007C12ED /* AppDelegate.swift in Sources */,

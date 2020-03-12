@@ -41,7 +41,6 @@ class MainFeediewController: UIViewController {
                 let posts = snapshot.documents.map { Post($0.data()) }
                 let df = DateFormatter()
                 df.dateFormat = "yyyy-MM-dd EE:EE"
-
                 let sortedPosts = posts.sorted { $0.postedDate.timeIntervalSinceNow > $1.postedDate.timeIntervalSinceNow }
                 self?.posts = sortedPosts
             }
@@ -72,6 +71,14 @@ extension MainFeediewController: UICollectionViewDataSource {
     }
 }
 extension MainFeediewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let post = posts[indexPath.row]
+        let mainViewSB = UIStoryboard(name: "Main", bundle: nil)
+        let postDetailVC = mainViewSB.instantiateViewController(identifier: "PostDetailController") { coder in
+            return PostDetailViewController(coder: coder, post: post)
+        }
+        present(postDetailVC, animated: true)
+    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenSize = UIScreen.main.bounds
         let width = screenSize.width
