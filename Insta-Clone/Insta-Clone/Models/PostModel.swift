@@ -15,6 +15,7 @@ struct Post {
     let caption: String
     let postID: String
     let postedDate: Date
+    let userID: String
 }
 extension Post {
     init(_ dictionary: [String: Any]) {
@@ -23,5 +24,6 @@ extension Post {
         self.caption = dictionary["caption"] as? String ?? "No Caption"
         self.postID = dictionary["postID"] as? String ?? "No post ID"
         self.postedDate = dictionary["postedDate"] as? Date ?? Date()
+        self.userID = dictionary["userID"] as? String ?? "No user ID"
     }
 }

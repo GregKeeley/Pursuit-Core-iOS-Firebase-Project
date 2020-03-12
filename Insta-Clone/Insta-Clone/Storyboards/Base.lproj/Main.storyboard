@@ -165,7 +165,35 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MA-jK-Y5t">
-                                                    <rect key="frame" x="8" y="367.5" width="242" height="22.5"/>
+                                                    <rect key="frame" x="8" y="366" width="242" height="24"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Post Caption">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name="Futura-MediumItalic"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbm-yi-Azg">
+                                                    <rect key="frame" x="258" y="366" width="116" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="116" id="HC0-dr-vDP"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="@CreatedBy">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name="Futura-CondensedMedium"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QmE-uV-vc1" userLabel="Post Caption(bkgd)">
+                                                    <rect key="frame" x="8" y="367" width="242" height="22.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Post Caption">
@@ -177,11 +205,11 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbm-yi-Azg">
-                                                    <rect key="frame" x="258" y="369.5" width="116" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbI-co-JuS" userLabel="@CreatedBy(bkgd)">
+                                                    <rect key="frame" x="258" y="367" width="116" height="22"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="116" id="HC0-dr-vDP"/>
+                                                        <constraint firstAttribute="height" constant="22" id="M9s-n3-0LR"/>
                                                     </constraints>
                                                     <attributedString key="attributedText">
                                                         <fragment content="@CreatedBy">
@@ -197,19 +225,30 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="2p0-zL-2Vz" firstAttribute="leading" secondItem="EIT-Ce-Eda" secondAttribute="leading" constant="8" id="6Bz-SE-XUY"/>
+                                                <constraint firstItem="QmE-uV-vc1" firstAttribute="trailing" secondItem="5MA-jK-Y5t" secondAttribute="trailing" id="EmT-ZZ-WWi"/>
+                                                <constraint firstItem="ZbI-co-JuS" firstAttribute="trailing" secondItem="dbm-yi-Azg" secondAttribute="trailing" id="G2n-gU-Uj3"/>
+                                                <constraint firstAttribute="bottom" secondItem="QmE-uV-vc1" secondAttribute="bottom" constant="8.5" id="MEP-V1-XfM"/>
+                                                <constraint firstItem="dbm-yi-Azg" firstAttribute="bottom" secondItem="5MA-jK-Y5t" secondAttribute="bottom" id="URf-P2-M3i"/>
                                                 <constraint firstAttribute="trailing" secondItem="2p0-zL-2Vz" secondAttribute="trailing" constant="8" id="Um6-e4-3Xt"/>
                                                 <constraint firstAttribute="bottom" secondItem="dbm-yi-Azg" secondAttribute="bottom" constant="8" id="YKE-B1-tSR"/>
                                                 <constraint firstAttribute="trailing" secondItem="dbm-yi-Azg" secondAttribute="trailing" constant="8" id="YYY-Xg-BAt"/>
                                                 <constraint firstItem="2p0-zL-2Vz" firstAttribute="top" secondItem="EIT-Ce-Eda" secondAttribute="top" constant="8" id="Zi5-BM-uAJ"/>
+                                                <constraint firstItem="QmE-uV-vc1" firstAttribute="leading" secondItem="5MA-jK-Y5t" secondAttribute="leading" id="fjb-wO-Zsc"/>
                                                 <constraint firstAttribute="bottom" secondItem="5MA-jK-Y5t" secondAttribute="bottom" constant="8" id="iR1-Bc-gBu"/>
                                                 <constraint firstItem="5MA-jK-Y5t" firstAttribute="leading" secondItem="EIT-Ce-Eda" secondAttribute="leading" constant="8" id="oby-9F-Rhy"/>
-                                                <constraint firstItem="dbm-yi-Azg" firstAttribute="height" secondItem="5MA-jK-Y5t" secondAttribute="height" multiplier="0.911111" id="uyd-bH-4VI"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZbI-co-JuS" secondAttribute="bottom" constant="9" id="pzJ-bK-Yss"/>
+                                                <constraint firstItem="ZbI-co-JuS" firstAttribute="top" secondItem="QmE-uV-vc1" secondAttribute="top" id="qY2-rx-fbc"/>
+                                                <constraint firstItem="dbm-yi-Azg" firstAttribute="top" secondItem="5MA-jK-Y5t" secondAttribute="top" id="rC2-i4-bfJ"/>
+                                                <constraint firstItem="ZbI-co-JuS" firstAttribute="firstBaseline" secondItem="dbm-yi-Azg" secondAttribute="firstBaseline" constant="1" id="taI-YO-Dw6"/>
+                                                <constraint firstItem="ZbI-co-JuS" firstAttribute="leading" secondItem="dbm-yi-Azg" secondAttribute="leading" id="ucB-Kh-jIv"/>
                                                 <constraint firstItem="dbm-yi-Azg" firstAttribute="leading" secondItem="5MA-jK-Y5t" secondAttribute="trailing" constant="8" id="ziO-Ch-fqp"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="382" height="398"/>
                                         <connections>
+                                            <outlet property="bkgdCaptionLabel" destination="QmE-uV-vc1" id="tUS-cA-hzq"/>
+                                            <outlet property="bkgdCreatedLabel" destination="ZbI-co-JuS" id="1m4-8Q-Ek0"/>
                                             <outlet property="createdByLabel" destination="dbm-yi-Azg" id="1wG-d4-ZAZ"/>
                                             <outlet property="postCaptionLabel" destination="5MA-jK-Y5t" id="jG5-fK-4Ve"/>
                                             <outlet property="postImageView" destination="2p0-zL-2Vz" id="8Hu-2f-Oez"/>

@@ -41,6 +41,7 @@ class CreatePostViewController: UIViewController {
     }
     
     private func setupUI() {
+        captionTextField.delegate = self
         postImageView.isUserInteractionEnabled = true
         postImageView.addGestureRecognizer(tapGesture)
         postImageView.layer.cornerRadius = 4
@@ -117,6 +118,11 @@ class CreatePostViewController: UIViewController {
         }
     }
 }
+extension CreatePostViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+}
 extension CreatePostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
@@ -126,6 +132,4 @@ extension CreatePostViewController: UIImagePickerControllerDelegate, UINavigatio
         dismiss(animated: true)
     }
 }
-extension CreatePostViewController: UITextFieldDelegate {
-    
-}
+

@@ -39,7 +39,10 @@ class MainFeediewController: UIViewController {
             } else if let snapshot = snapshot {
                 print("There are \(snapshot.documents.count) posts")
                 let posts = snapshot.documents.map { Post($0.data()) }
-                let sortedPosts = posts.sorted { $0.postedDate > $1.postedDate }
+                let df = DateFormatter()
+                df.dateFormat = "yyyy-MM-dd EE:EE"
+
+                let sortedPosts = posts.sorted { $0.postedDate.timeIntervalSinceNow > $1.postedDate.timeIntervalSinceNow }
                 self?.posts = sortedPosts
             }
         })
