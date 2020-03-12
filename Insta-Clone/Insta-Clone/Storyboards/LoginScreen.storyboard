@@ -84,8 +84,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oV2-0b-Aec">
-                                <rect key="frame" x="101.5" y="488" width="211" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oV2-0b-Aec">
+                                <rect key="frame" x="86" y="488" width="243" height="25"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="No Account? No problem, sign up here">
@@ -152,7 +152,7 @@
                             <constraint firstItem="awQ-iS-rDM" firstAttribute="top" secondItem="LVL-NS-UDi" secondAttribute="top" constant="253" id="beF-bB-XPB"/>
                             <constraint firstItem="wfd-1g-13A" firstAttribute="top" secondItem="NlV-Ug-16Y" secondAttribute="bottom" constant="-4" id="n2X-zC-fLg"/>
                             <constraint firstItem="wfd-1g-13A" firstAttribute="top" secondItem="LVL-NS-UDi" secondAttribute="top" constant="30" id="pWZ-vi-ie2"/>
-                            <constraint firstItem="wBJ-xZ-8Mf" firstAttribute="leading" secondItem="oV2-0b-Aec" secondAttribute="leading" id="s5j-xa-vcm"/>
+                            <constraint firstItem="wBJ-xZ-8Mf" firstAttribute="leading" secondItem="oV2-0b-Aec" secondAttribute="leading" constant="15.5" id="s5j-xa-vcm"/>
                             <constraint firstItem="DMU-84-dtT" firstAttribute="leading" secondItem="LVL-NS-UDi" secondAttribute="leading" constant="65" id="uJx-FM-SRE"/>
                             <constraint firstItem="Bp1-6g-atu" firstAttribute="top" secondItem="DMU-84-dtT" secondAttribute="bottom" constant="20" id="wWS-Li-phQ"/>
                             <constraint firstItem="oV2-0b-Aec" firstAttribute="centerX" secondItem="kRY-o5-fb3" secondAttribute="centerX" id="x1Z-dk-Ept"/>

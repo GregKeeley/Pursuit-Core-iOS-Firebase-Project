@@ -19,6 +19,7 @@ class MainFeediewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
+                dump(self.posts)
             }
         }
     }
@@ -38,8 +39,8 @@ class MainFeediewController: UIViewController {
             } else if let snapshot = snapshot {
                 print("There are \(snapshot.documents.count) posts")
                 let posts = snapshot.documents.map { Post($0.data()) }
-                self?.posts = posts
-                dump(self?.posts)
+                let sortedPosts = posts.sorted { $0.postedDate > $1.postedDate }
+                self?.posts = sortedPosts
             }
         })
     }
