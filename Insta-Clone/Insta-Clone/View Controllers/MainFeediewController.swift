@@ -19,7 +19,7 @@ class MainFeediewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
-                dump(self.posts)
+
             }
         }
     }
@@ -37,11 +37,10 @@ class MainFeediewController: UIViewController {
                     self?.showAlert(title: "Firestore Error", message: "\(error.localizedDescription)")
                 }
             } else if let snapshot = snapshot {
-                print("There are \(snapshot.documents.count) posts")
                 let posts = snapshot.documents.map { Post($0.data()) }
                 let df = DateFormatter()
-                df.dateFormat = "yyyy-MM-dd EE:EE"
-                let sortedPosts = posts.sorted { $0.postedDate.timeIntervalSinceNow > $1.postedDate.timeIntervalSinceNow }
+                df.dateFormat = "yyyyMMddhhmmss"
+                let sortedPosts = posts.sorted { df.string(from: $0.postedDate) <  df.string(from: $1.postedDate) }
                 self?.posts = sortedPosts
             }
         })
